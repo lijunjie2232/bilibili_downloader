@@ -1,0 +1,24 @@
+passport:
+  url: "https://passport.bilibili.com"
+  api:
+    qrcode:
+      generate: "/x/passport-login/web/qrcode/generate"
+      poll: "/x/passport-login/web/qrcode/poll"
+    exit: "/login/exit/v2"
+
+user:
+  url: "https://api.bilibili.com"
+  api:
+    nav: "/x/web-interface/nav"
+
+season:
+  url: "https://api.bilibili.com"
+  api:
+    seasons_archives_list: "/x/polymer/web-space/seasons_archives_list"
+    view: "/x/web-interface/view"
+    detail: "/x/web-interface/wbi/view/detail"
+
+video:
+  url: "https://api.bilibili.com"
+  api:
+    playurl: "/x/player/wbi/playurl"

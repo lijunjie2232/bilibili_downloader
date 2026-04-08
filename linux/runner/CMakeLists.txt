@@ -16,6 +16,11 @@ add_executable(${BINARY_NAME}
 # that need different build settings.
 apply_standard_settings(${BINARY_NAME})
 
+# Disable deprecated declarations warning for tray_manager compatibility
+# This is needed because tray_manager uses app_indicator_new which is deprecated
+# but still functional. The alternative API is not yet stable.
+target_compile_options(${BINARY_NAME} PRIVATE -Wno-deprecated-declarations)
+
 # Add preprocessor definitions for the application ID.
 add_definitions(-DAPPLICATION_ID="${APPLICATION_ID}")
 
